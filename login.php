@@ -1,4 +1,11 @@
 <?php
+
+if(!isset($_SESSION)){  //if $_SESSION is not available
+    session_start();    //gives access to the $_SESSION variable
+}
+if(isset($_SESSION['LoggedInEmail'])){ //user is already logged in so proceed to tasks.php
+    echo header("Location: tasks.php");//proceed to tasks.php.
+}
     include_once("connections/connection.php");
     $db_connection = connection();
 
@@ -14,7 +21,10 @@
         $fetched_rows = $result -> num_rows;
 
         if($fetched_rows == 1){
-            //start a session.
+            $user = $result -> fetch_assoc(); //distribute to associative array the fetched result from the db.
+
+            $_SESSION['LoggedInEmail'] = $user['email'];
+
             echo header("Location: tasks.php");//proceed to tasks.php.
         }
     }

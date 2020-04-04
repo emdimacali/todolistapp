@@ -29,7 +29,8 @@ function checkIfUserAlreadyExists() {
     registrationMessageDiv.appendChild(msg);
 
     let loginTag = document.createElement("p");
-    loginTag.innerHTML = 'Would you like to <a href="#">login</a> instead?';
+    loginTag.innerHTML =
+      'Would you like to <a href="login.php">login</a> instead?';
     registrationMessageDiv.appendChild(loginTag);
   }
 }

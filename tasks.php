@@ -1,3 +1,14 @@
+<?php
+
+    if(!isset($_SESSION)){  //if $_SESSION is not available
+        session_start();    //gives access to the $_SESSION variable
+    }
+
+    if(!isset($_SESSION['LoggedInEmail'])){
+        echo header("Location: login.php"); //redirect to login if there is nothing set in Session of User.
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

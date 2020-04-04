@@ -10,7 +10,6 @@
         $sql = "SELECT * FROM `app_users` where email='$email'";
         $result = $db_connection -> query($sql) or die($db_connection -> error);
         $fetched_rows = $result -> num_rows;
-        //echo $fetched_rows;
         
         if($fetched_rows < 1){
             $sha1EncryptedPassword = sha1($password);

@@ -8,7 +8,7 @@ function checkIfUserExistsInDb() {
     loginMessageDiv.appendChild(msg);
 
     let registerTag = document.createElement("p");
-    loginTag.innerHTML =
+    registerTag.innerHTML =
       'Would you like to <a href="register.php">register</a> instead?';
     loginMessageDiv.appendChild(registerTag);
   }
