@@ -45,7 +45,7 @@
         <label for="password">Password</label>
         <input type="password" name="password" id="password" oninput="checkPasswordStrength(this.value)" required>
         
-        <input type="submit" name="register" id="register" disabled>
+        <input type="submit" name="register" id="register" value="Register" disabled>
     </form>
     
     <div id="registration-message"></div>
